@@ -7,10 +7,11 @@
     "outDir": "./dist",
     
     "esModuleInterop": true,
+    
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
+    "module": "esnext",
 
     "types": [],
     // For nodejs:
@@ -44,4 +45,5 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
   }
+
 }

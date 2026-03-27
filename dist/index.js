@@ -1,6 +1,4 @@
-import type { Proyecto, PullRequest, Tecnologia, Desarrollador, Repositorio, Issue } from './types.js';
-import {equipoDeDesarrolladores, pullRequest, issues} from './reportes.js'
-
+import { equipoDeDesarrolladores, pullRequest, issues } from './reportes.js';
 //Recorrer todo el array de desarrolladores
 /* for(const e of equipoDeDesarrolladores){
         console.log(`
@@ -15,5 +13,5 @@ Disponibilidad: ${e.disponibilidad ? "Disponible" : "Inactivo"}
 };
 
 console.log(JSON.stringify(pullRequest, null, 2)); */
-
-console.log(JSON.stringify(issues, null,2))
+console.log(JSON.stringify(issues, null, 2));
+//# sourceMappingURL=index.js.map

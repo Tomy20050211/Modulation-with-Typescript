@@ -31,10 +31,10 @@ export interface Repositorio {
 
 export interface PullRequest{
     id: number,
-    tituñp: string,
+    titulo: string,
     estado: Estado,
     autor:Desarrollador,
-    reviewers:Desarrollador,
+    reviewers:Desarrollador[],
     lineasDeCodigo: number
 };
 
@@ -50,7 +50,7 @@ export interface Issue{
 export interface Proyecto {
     nombre: string,
     repositorio: Repositorio,
-    listaDeIssues: Issue,
-    listaDePullRequest: PullRequest,
-    equipoDeDesarrolladores: Desarrollador
+    listaDeIssues: Issue[],
+    listaDePullRequest: PullRequest[],
+    equipoDeDesarrolladores: Desarrollador[]
 };
