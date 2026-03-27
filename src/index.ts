@@ -1,5 +1,5 @@
 import type { Proyecto, PullRequest, Tecnologia, Desarrollador, Repositorio, Issue } from './types.js';
-import {equipoDeDesarrolladores, pullRequest, issues} from './reportes.js'
+import {equipoDeDesarrolladoresaArray, pullRequest, issues, proyecto} from './reportes.js'
 
 //Recorrer todo el array de desarrolladores
 /* for(const e of equipoDeDesarrolladores){
@@ -16,4 +16,25 @@ Disponibilidad: ${e.disponibilidad ? "Disponible" : "Inactivo"}
 
 console.log(JSON.stringify(pullRequest, null, 2)); */
 
-console.log(JSON.stringify(issues, null,2))
+function mostrarProyecto(proyecto: Proyecto): void {
+  console.log(`
+Nombre del proyecto: ${proyecto.nombre}
+Nombre del repositorio: ${proyecto.repositorio.nombre}
+
+Lista de issues:
+${proyecto.listaDeIssues
+  .map((issue) => `- ${issue.titulo} (${issue.estado})`)
+  .join("\n")}
+
+Lista de pull request:
+${proyecto.listaDePullRequest
+  .map((pr) => `- ${pr.titulo} (${pr.estado})`) .join("\n")}
+
+Equipo de desarrollo:
+${proyecto.equipoDeDesarrolladores
+  .map((dev) => `- ${dev.nombre}`)
+  .join("\n")}
+`);
+}
+
+mostrarProyecto(proyecto)
